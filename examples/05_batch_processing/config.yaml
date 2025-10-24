@@ -1,0 +1,59 @@
+# Batch Processing Configuration
+# =============================
+
+# Basic batch processing settings
+batch_basic:
+  horizon: 3
+  normalize: "global"
+  decay: ["exp", 0.7]
+  mask: "letters"
+
+# Fast processing (optimized for speed)
+batch_fast:
+  horizon: 2
+  normalize: "global"
+  decay: ["exp", 1.0]
+  mask: "letters"
+
+# Balanced processing (speed vs accuracy)
+batch_balanced:
+  horizon: 4
+  normalize: "row"
+  decay: ["gauss", {'mu': 2.0, 'sigma': 1.0}]
+  mask: "letters"
+
+# Accurate processing (optimized for precision)
+batch_accurate:
+  horizon: 6
+  normalize: "global"
+  decay: ["morlet", {'omega': 3.0, 'sigma': 1.2}]
+  mask: "letters"
+
+# Large text processing
+large_text:
+  horizon: 5
+  normalize: "global"
+  decay: ["gauss", {'mu': 2.5, 'sigma': 1.5}]
+  mask: "letters"
+
+# Memory-optimized settings
+memory_optimized:
+  horizon: 3
+  normalize: "row"
+  decay: ["exp", 0.8]
+  mask: "letters"
+
+# High-throughput processing
+high_throughput:
+  horizon: 2
+  normalize: "global"
+  decay: ["inv", {'p': 1.0}]
+  mask: "none"
+
+# Research-grade batch processing
+research_batch:
+  horizon: 8
+  normalize: "row"
+  bank: "morlet:omega=2.0;sigma=1.0 + gauss:mu=3.0;sigma=1.5"
+  aggregate: "sum_abs"
+  mask: "letters"

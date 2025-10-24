@@ -1,0 +1,31 @@
+# Authorship Attribution Configuration
+# ===================================
+
+# Settings optimized for authorship attribution
+authorship:
+  horizon: 5
+  normalize: "row"
+  decay: ["gauss", {"mu": 2.5, "sigma": 1.2}]
+  mask: "letters"
+
+# Settings for detailed style analysis
+style_analysis:
+  horizon: 7
+  normalize: "global"
+  decay: ["morlet", {"omega": 3.0, "sigma": 1.0}]
+  mask: "letters"
+
+# High-precision settings for research
+research:
+  horizon: 10
+  normalize: "row"
+  bank: "morlet:omega=3.0;sigma=1.0 + gauss:mu=3.0;sigma=1.5"
+  aggregate: "sum_abs"
+  mask: "letters"
+
+# Fast classification for real-time applications
+realtime:
+  horizon: 3
+  normalize: "global"
+  decay: ["exp", 0.8]
+  mask: "letters"

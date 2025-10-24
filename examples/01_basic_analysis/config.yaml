@@ -1,0 +1,24 @@
+# Basic Analysis Configuration
+# ============================
+
+# Default settings for basic text analysis
+default:
+  alphabet: "en"
+  horizon: 3
+  normalize: "global"
+  decay: "('exp', 0.7)"
+
+# Simple comparison settings
+comparison:
+  alphabet: "en"
+  horizon: 5
+  normalize: "row"
+  decay: "('gauss', {'mu': 2.0, 'sigma': 1.0})"
+  mask: "letters"
+
+# Performance-oriented settings
+fast:
+  alphabet: "en"
+  horizon: 2
+  normalize: "global"
+  decay: "('exp', 1.0)"

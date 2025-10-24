@@ -1,0 +1,62 @@
+# Blog Authorship Analysis Configuration
+# =====================================
+
+# Basic authorship detection
+basic_analysis:
+  horizon: 5
+  normalize: "row"
+  decay: ["gauss", {"mu": 2.5, "sigma": 1.2}]
+  mask: "letters"
+
+# Advanced multi-scale analysis
+multi_scale:
+  horizon: 8
+  normalize: "global"
+  bank: "morlet:omega=2.0,sigma=1.0 + gauss:mu=3.0,sigma=1.5 + exp:lambda=0.8"
+  aggregate: "sum_abs"
+  mask: "letters"
+
+# Style signature analysis
+style_signature:
+  horizon: 6
+  normalize: "row"
+  decay: ["morlet", {"omega": 3.5, "sigma": 1.3}]
+  mask: "letters"
+
+# Temporal pattern analysis
+temporal_analysis:
+  horizon: 10
+  normalize: "global"
+  bank: "morlet:omega=1.5,sigma=0.8 + morlet:omega=4.0,sigma=1.5 + mexican:sigma=2.0"
+  aggregate: "sum_abs"
+  mask: "letters"
+
+# High-precision research mode
+research_mode:
+  horizon: 12
+  normalize: "row"
+  bank: "morlet:omega=2.0,sigma=1.0,scale=0.8 + morlet:omega=5.0,sigma=1.8,scale=1.2 + gauss:mu=4.0,sigma=2.0"
+  aggregate: "sum_abs"
+  mask: "letters"
+  phase: ["entropy", 0.15, 3.1415]
+
+# Fast classification for real-time
+realtime:
+  horizon: 3
+  normalize: "global"
+  decay: ["exp", 0.9]
+  mask: "letters"
+
+# Comparative analysis settings
+comparative:
+  horizon: 7
+  normalize: "row"
+  decay: ["gauss", {"mu": 3.0, "sigma": 1.4}]
+  mask: "letters"
+
+# Cross-validation settings
+cross_validation:
+  horizon: 5
+  normalize: "global"
+  decay: ["morlet", {"omega": 2.8, "sigma": 1.1}]
+  mask: "letters"

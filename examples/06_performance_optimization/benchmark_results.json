@@ -1,0 +1,216 @@
+{
+  "system_info": {
+    "cpu_count": 24,
+    "memory_total": 63.904205322265625,
+    "python_version": "3.13"
+  },
+  "horizon_analysis": [
+    {
+      "horizon": 1,
+      "time_ms": 2.6564598083496094,
+      "memory_mb": 0.0,
+      "density": 0.0,
+      "matrix_size": 1156
+    },
+    {
+      "horizon": 2,
+      "time_ms": 3.818035125732422,
+      "memory_mb": 0.0,
+      "density": 0.0,
+      "matrix_size": 1156
+    },
+    {
+      "horizon": 3,
+      "time_ms": 5.327463150024414,
+      "memory_mb": 0.0,
+      "density": 0.0,
+      "matrix_size": 1156
+    },
+    {
+      "horizon": 5,
+      "time_ms": 7.461309432983398,
+      "memory_mb": 0.0,
+      "density": 0.0,
+      "matrix_size": 1156
+    },
+    {
+      "horizon": 8,
+      "time_ms": 12.556791305541992,
+      "memory_mb": 0.0,
+      "density": 0.0,
+      "matrix_size": 1156
+    },
+    {
+      "horizon": 10,
+      "time_ms": 14.080286026000977,
+      "memory_mb": 0.06640625,
+      "density": 0.0,
+      "matrix_size": 1156
+    },
+    {
+      "horizon": 15,
+      "time_ms": 20.053863525390625,
+      "memory_mb": 0.08203125,
+      "density": 0.0,
+      "matrix_size": 1156
+    },
+    {
+      "horizon": 20,
+      "time_ms": 26.939868927001953,
+      "memory_mb": 0.10546875,
+      "density": 0.0,
+      "matrix_size": 1156
+    }
+  ],
+  "decay_benchmark": [
+    {
+      "name": "Exponential",
+      "time_ms": 5.669593811035156,
+      "memory_mb": 0.0,
+      "is_complex": false,
+      "sum": 0.0
+    },
+    {
+      "name": "Inverse",
+      "time_ms": 5.6133270263671875,
+      "memory_mb": 0.0,
+      "is_complex": false,
+      "sum": 0.0
+    },
+    {
+      "name": "Gaussian",
+      "time_ms": 6.164312362670898,
+      "memory_mb": 0.0,
+      "is_complex": false,
+      "sum": 0.0
+    },
+    {
+      "name": "Morlet",
+      "time_ms": 5.75566291809082,
+      "memory_mb": 0.0,
+      "is_complex": true,
+      "sum": 0.0
+    },
+    {
+      "name": "Mexican Hat",
+      "time_ms": 5.692481994628906,
+      "memory_mb": 0.0,
+      "is_complex": false,
+      "sum": 0.0
+    }
+  ],
+  "batch_optimization": [
+    {
+      "batch_size": 1,
+      "time_s": 0.00081634521484375,
+      "throughput_kbs": 129.19626168224298,
+      "memory_mb": 0.0,
+      "chars_per_sec": 132296.9719626168
+    },
+    {
+      "batch_size": 5,
+      "time_s": 0.004681110382080078,
+      "throughput_kbs": 187.75593358459815,
+      "memory_mb": 0.0,
+      "chars_per_sec": 192262.0759906285
+    },
+    {
+      "batch_size": 10,
+      "time_s": 0.012267351150512695,
+      "throughput_kbs": 214.9379044953647,
+      "memory_mb": 0.02734375,
+      "chars_per_sec": 220096.41420325346
+    },
+    {
+      "batch_size": 15,
+      "time_s": 0.041019439697265625,
+      "throughput_kbs": 290.44917697386774,
+      "memory_mb": 0.0234375,
+      "chars_per_sec": 297419.95722124056
+    },
+    {
+      "batch_size": 20,
+      "time_s": 0.09453177452087402,
+      "throughput_kbs": 322.3122611886657,
+      "memory_mb": 0.00390625,
+      "chars_per_sec": 330047.75545719365
+    },
+    {
+      "batch_size": 25,
+      "time_s": 0.3536109924316406,
+      "throughput_kbs": 343.0013916307971,
+      "memory_mb": 0.01171875,
+      "chars_per_sec": 351233.42502993625
+    }
+  ],
+  "memory_analysis": [
+    {
+      "text_size": 100,
+      "time_ms": 0.8625984191894531,
+      "memory_mb": 0.0,
+      "matrix_bytes": 9248,
+      "bytes_per_char": 98.38297872340425
+    },
+    {
+      "text_size": 500,
+      "time_ms": 2.1369457244873047,
+      "memory_mb": 0.0,
+      "matrix_bytes": 9248,
+      "bytes_per_char": 19.676595744680853
+    },
+    {
+      "text_size": 1000,
+      "time_ms": 3.9610862731933594,
+      "memory_mb": 0.0,
+      "matrix_bytes": 9248,
+      "bytes_per_char": 9.369807497467072
+    },
+    {
+      "text_size": 5000,
+      "time_ms": 17.972707748413086,
+      "memory_mb": 0.0,
+      "matrix_bytes": 9248,
+      "bytes_per_char": 1.8562826174227218
+    },
+    {
+      "text_size": 10000,
+      "time_ms": 35.054922103881836,
+      "memory_mb": 0.0,
+      "matrix_bytes": 9248,
+      "bytes_per_char": 0.9281413087113609
+    },
+    {
+      "text_size": 20000,
+      "time_ms": 69.75340843200684,
+      "memory_mb": 0.0,
+      "matrix_bytes": 9248,
+      "bytes_per_char": 0.46297872340425533
+    }
+  ],
+  "algorithm_comparison": [
+    {
+      "name": "Fast",
+      "time_ms": 2.133607864379883,
+      "memory_mb": 0.0,
+      "accuracy": 0.0
+    },
+    {
+      "name": "Balanced",
+      "time_ms": 3.4227371215820312,
+      "memory_mb": 0.0,
+      "accuracy": 0.0
+    },
+    {
+      "name": "Accurate",
+      "time_ms": 5.9719085693359375,
+      "memory_mb": 0.0,
+      "accuracy": 0.0
+    },
+    {
+      "name": "Complex",
+      "time_ms": 4.748821258544922,
+      "memory_mb": 0.0,
+      "accuracy": 0.0
+    }
+  ]
+}

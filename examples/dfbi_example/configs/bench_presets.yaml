@@ -1,0 +1,31 @@
+
+multi_scale:
+  horizon: 4
+  bank: "gabor:omega=1.0,sigma=1.0;gabor:omega=0.5,sigma=2.0"
+  aggregate: "sum_abs"
+  mask: "letters"
+  normalize: "global"
+
+single_gabor:
+  horizon: 4
+  kernel: "gabor:omega=1.0,sigma=1.0"
+  mask: "letters"
+  normalize: "global"
+
+baseline_exp:
+  horizon: 4
+  decay: ["exp", 0.7]
+  mask: "letters"
+  normalize: "global"
+
+grid_sweep:
+  horizons: [1,2,3,4,6]
+  metrics: ["l2","cosine"]
+  masks: ["letters"]
+  runs:
+    - name: "exp_lam07"
+      fp: {horizon: 0, decay: ["exp", 0.7], mask: "letters", normalize: "global"}
+    - name: "gabor_1.0_1.0"
+      fp: {horizon: 0, kernel: "gabor:omega=1.0,sigma=1.0", mask: "letters", normalize: "global"}
+    - name: "bank_gabor"
+      fp: {horizon: 0, bank: "gabor:omega=1.0,sigma=1.0;gabor:omega=0.5,sigma=2.0", aggregate: "sum_abs", mask: "letters", normalize: "global"}

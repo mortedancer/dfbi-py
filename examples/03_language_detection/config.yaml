@@ -1,0 +1,38 @@
+# Language Detection Configuration
+# ===============================
+
+# Optimized settings for language detection
+language_detection:
+  horizon: 4
+  normalize: "global"
+  decay: ["gauss", {'mu': 2.0, 'sigma': 1.0}]
+  mask: "letters"
+
+# Settings for cross-alphabet analysis
+cross_alphabet:
+  horizon: 3
+  normalize: "row"
+  decay: ["exp", 0.8]
+  mask: "letters"
+
+# Settings for multilingual comparison
+multilingual:
+  horizon: 5
+  normalize: "global"
+  decay: ["morlet", {'omega': 2.5, 'sigma': 1.2}]
+  mask: "letters"
+
+# High-precision settings for research
+research:
+  horizon: 8
+  normalize: "row"
+  bank: "gauss:mu=2.0;sigma=1.0 + morlet:omega=3.0;sigma=1.5"
+  aggregate: "sum_abs"
+  mask: "letters"
+
+# Fast detection for real-time applications
+realtime:
+  horizon: 2
+  normalize: "global"
+  decay: ["exp", 1.0]
+  mask: "letters"
