@@ -1,0 +1,17 @@
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dfbi"
+version = "0.1.6"
+description = "Deterministic Finite-horizon Bigram Interference (DFBI) with wave kernels"
+readme = "README.md"
+authors = [{name = "DFBI Team"}]
+requires-python = ">=3.8"
+dependencies = ["numpy>=1.22", "pandas>=1.4"]
+license = {text = "MIT"}
+
+[project.scripts]
+dfbi-cli = "dfbi.cli:main"

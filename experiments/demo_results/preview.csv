@@ -1,0 +1,4 @@
+horizon,mask,metric,throughput_MBps,loocv_acc
+1,letters,l1,0.12827707416532155,0.0
+1,letters,l2,0.12827707416532155,0.0
+1,letters,chi2,0.12827707416532155,0.0
